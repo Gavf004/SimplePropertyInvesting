@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using SimplePropertyInvesting.Context;
 using SimplePropertyInvesting.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +13,18 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddDbContext<InvestContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EFConnection"));
+});
+
 builder.Services.AddControllersWithViews();
+
+//builder.Services.AddDbContext<InvestContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("EFConnection"));
+//});
 
 var app = builder.Build();
 

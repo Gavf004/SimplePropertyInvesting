@@ -1,0 +1,90 @@
+﻿@model SimplePropertyInvesting.Models.Property
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Address3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Address3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Eircode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Eircode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Property_Value)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Property_Value)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Purchase_Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Purchase_Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Purchase_Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Purchase_Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Property_Tax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Property_Tax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Property_Insurance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Property_Insurance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Monthly_Rental_Income)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Monthly_Rental_Income)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Total_Expenditure)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Total_Expenditure)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Monthly_Mortgage_Payment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Monthly_Mortgage_Payment)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Property_Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<SimplePropertyInvesting.Models.Property>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Address1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eircode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property_Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purchase_Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purchase_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property_Tax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property_Insurance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monthly_Rental_Income)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Expenditure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Monthly_Mortgage_Payment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eircode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property_Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purchase_Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purchase_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property_Tax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property_Insurance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monthly_Rental_Income)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_Expenditure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monthly_Mortgage_Payment)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Property_Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Property_Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Property_Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿
+
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -64,9 +66,10 @@ namespace SimplePropertyInvesting.Models
 
 
         //navigation properties
+        public virtual int UserID { get; set; }
+        //public User User { get; set; }
 
-        public int UserID { get; set; }
-        public virtual User User { get; set; }
+        public ICollection<Unit> Units { get; set; }
 
 
 

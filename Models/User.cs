@@ -28,6 +28,7 @@ namespace SimplePropertyInvesting.Models
         public string Email { get; set; }
 
         // Add list of property ID's.
+        public ICollection<Property> Properties { get; set; }
 
     }
 }
